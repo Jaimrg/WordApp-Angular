@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import {ReactiveFormsModule} from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -15,6 +15,12 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatListModule } from '@angular/material/list';
 import { RegistrarComponent } from './registrar/registrar.component';
+import { ClienteComponent } from './cliente/cliente.component';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import { ListarComponent } from './listar/listar.component';
+import { CalculatorComponent } from './calculator/calculator.component';
+
+
 
 @NgModule({
   declarations: [
@@ -24,18 +30,23 @@ import { RegistrarComponent } from './registrar/registrar.component';
     DashboardComponent,
     SidenavComponent,
     RegistrarComponent,
+    ClienteComponent,
+    ListarComponent,
+    CalculatorComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     // * MATERIAL IMPORTS
+    ReactiveFormsModule,
     MatSidenavModule,
     MatToolbarModule,
     MatMenuModule,
     MatIconModule,
     MatDividerModule,
     MatListModule,
+    MatFormFieldModule
   ],
   providers: [],
   bootstrap: [AppComponent],
